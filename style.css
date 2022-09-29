@@ -1,0 +1,35 @@
+body{
+    background-color: #B1E1FF;
+}
+#dtBasicExample{
+width: 60%;
+margin: auto;
+margin-top: 3rem;
+border-radius: 20%;
+}
+
+.card{
+width: 20%;
+margin-left: 19rem;
+margin-top: 3rem;
+}
+.pagination{
+display:flex;
+justify-content: center;
+align-content: center;
+margin-top: 4rem;
+}
+
+@media(max-width:1020px)
+{
+    .card{
+        display: flex;
+width: 50%;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+     
+      
+        }
+
+}

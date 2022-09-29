@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+     
+        <div class="card">
+            <div class="card-header text-bg-dark">
+              Search
+            </div>
+            <div class="card-body">
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+             
+            </div>
+          </div>
+          <br>
+        <table id="dtBasicExample" class="table  table-info table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="th-sm">Name
+                </th>
+                <th class="th-sm">Position
+                </th>
+                <th class="th-sm">Office
+                </th>
+                <th class="th-sm">Age
+                </th>
+                <th class="th-sm">Start date
+                </th>
+                <th class="th-sm">Salary
+                </th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+        
+        <tr>
+            <td>Vivian Harrell</td>
+            <td>Financial Controller</td>
+            <td>San Francisco</td>
+            <td>62</td>
+            <td>2009/02/14</td>
+            <td>$452,500</td>
+          </tr>
+          <tr>
+            <td>Timothy Mooney</td>
+            <td>Office Manager</td>
+            <td>London</td>
+            <td>37</td>
+            <td>2008/12/11</td>
+            <td>$136,200</td>
+          </tr>
+          <tr>
+            <td>Jackson Bradshaw</td>
+            <td>Director</td>
+            <td>New York</td>
+            <td>65</td>
+            <td>2008/09/26</td>
+            <td>$645,750</td>
+          </tr>
+          <tr>
+            <td>Olivia Liang</td>
+            <td>Support Engineer</td>
+            <td>Singapore</td>
+            <td>64</td>
+            <td>2011/02/03</td>
+            <td>$234,500</td>
+          </tr>
+          <tr>
+            <td>Bruno Nash</td>
+            <td>Software Engineer</td>
+            <td>London</td>
+            <td>38</td>
+            <td>2011/05/03</td>
+            <td>$163,500</td>
+          </tr>
+      
+               
+    </table>
+        <nav aria-label="...">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="index2.html">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+                  <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+                  <li class="page-item"><a class="page-link" href="index3.html">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+                  
+        
+        
+        <script >
+            $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+        </script>
+    </body>
+</html>

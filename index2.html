@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-header text-bg-dark">
+              Search
+            </div>
+            <div class="card-body">
+                <input class="form-control" id="myInput" type="text" placeholder="Search..">
+             
+            </div>
+          </div>
+        <table id="dtBasicExample" class="table  table-info table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="th-sm">Name
+                </th>
+                <th class="th-sm">Position
+                </th>
+                <th class="th-sm">Office
+                </th>
+                <th class="th-sm">Age
+                </th>
+                <th class="th-sm">Start date
+                </th>
+                <th class="th-sm">Salary
+                </th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+        <tr>
+            <td>Brielle Williamson</td>
+            <td>Integration Specialist</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2012/12/02</td>
+            <td>$372,000</td>
+          </tr>
+          <tr>
+            <td>Herrod Chandler</td>
+            <td>Sales Assistant</td>
+            <td>San Francisco</td>
+            <td>59</td>
+            <td>2012/08/06</td>
+            <td>$137,500</td>
+          </tr>
+          <tr>
+            <td>Rhona Davidson</td>
+            <td>Integration Specialist</td>
+            <td>Tokyo</td>
+            <td>55</td>
+            <td>2010/10/14</td>
+            <td>$327,900</td>
+          </tr>
+          <tr>
+            <td>Colleen Hurst</td>
+            <td>Javascript Developer</td>
+            <td>San Francisco</td>
+            <td>39</td>
+            <td>2009/09/15</td>
+            <td>$205,500</td>
+          </tr>
+          <tr>
+            <td>Jennifer Acosta</td>
+            <td>Junior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>43</td>
+            <td>2013/02/01</td>
+            <td>$75,650</td>
+          </tr>
+          <tr>
+            <td>Cara Stevens</td>
+            <td>Sales Assistant</td>
+            <td>New York</td>
+            <td>46</td>
+            <td>2011/12/06</td>
+            <td>$145,600</td>
+          </tr>
+          <tr>
+            <td>Hermione Butler</td>
+            <td>Regional Director</td>
+            <td>London</td>
+            <td>47</td>
+            <td>2011/03/21</td>
+            <td>$356,250</td>
+          </tr>
+          <tr>
+            <td>Lael Greer</td>
+            <td>Systems Administrator</td>
+            <td>London</td>
+            <td>21</td>
+            <td>2009/02/27</td>
+            <td>$103,500</td>
+          </tr>
+          <tr>
+            <td>Jonas Alexander</td>
+            <td>Developer</td>
+            <td>San Francisco</td>
+            <td>30</td>
+            <td>2010/07/14</td>
+            <td>$86,500</td>
+          </tr>
+          <tr>
+            <td>Shad Decker</td>
+            <td>Regional Director</td>
+            <td>Edinburgh</td>
+            <td>51</td>
+            <td>2008/11/13</td>
+            <td>$183,000</td>
+          </tr>
+          <tr>
+            <td>Michael Bruce</td>
+            <td>Javascript Developer</td>
+            <td>Singapore</td>
+            <td>29</td>
+            <td>2011/06/27</td>
+            <td>$183,000</td>
+          </tr>
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+            <td>$112,000</td>
+          </tr>
+        
+               
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="index3.html">3</a></li>
+          <li class="page-item"><a class="page-link" href="index3.html">Next</a></li>
+        </ul>
+      </nav>
+                  
+        
+        <script >
+            $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+        </script>
+    </body>
+</html>
